@@ -1,359 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fmbags</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fmbags</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+  <!-- Font Awesome for burger icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
+  <div class="bg-light-gray h-screen overflow-hidden relative">
+    <header class="absolute top-0 left-0 right-0 p-4 flex justify-between items-center z-20">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="../assets/image/social.png" class="h-8" alt="Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Fmbags</span>
+      </a>
+
+      <!-- Burger button for mobile -->
+      <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6">
+          <!--
+          <li><a href="#" class="text-gray-700 hover:text-black">HOME</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-black">ABOUT</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-black">SERVICE</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-black">PORTFOLIO</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-black">RESUME</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-black">BLOG</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-black">CONTACT</a></li>
+          -->
+        </ul>
+      </nav>
+
+      <div class="social-links hidden md:flex space-x-4">
+        <a href="https://www.linkedin.com/in/francis-mark-baguion-b21457216/" class="hover:opacity-75 transition">
+          <img src="../assets/image/linkedinline.png" alt="LinkedIn" class="w-6 h-6">
+        </a>
+        <a href="https://github.com/Francis-Mark-Baguion" class="hover:opacity-75 transition">
+          <img src="../assets/image/githubline.png" alt="GitHub" class="w-6 h-6">
+        </a>
+        <a href="https://www.instagram.com/francismarkbaguion/" class="hover:opacity-75 transition">
+          <img src="../assets/image/instagramline.png" alt="Instagram" class="w-6 h-6">
+        </a>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-10 pt-20 px-4">
+      <nav class="flex flex-col space-y-4">
+        <a href="#" class="text-gray-700 hover:text-black text-xl py-2">HOME</a>
+        <a href="#" class="text-gray-700 hover:text-black text-xl py-2">ABOUT</a>
+        <a href="#" class="text-gray-700 hover:text-black text-xl py-2">SERVICE</a>
+        <a href="#" class="text-gray-700 hover:text-black text-xl py-2">PORTFOLIO</a>
+        <a href="#" class="text-gray-700 hover:text-black text-xl py-2">RESUME</a>
+        <a href="#" class="text-gray-700 hover:text-black text-xl py-2">BLOG</a>
+        <a href="#" class="text-gray-700 hover:text-black text-xl py-2">CONTACT</a>
+      </nav>
+
+      <div class="social-links flex space-x-4 mt-6">
+        <a href="https://www.linkedin.com/in/francis-mark-baguion-b21457216/" class="hover:opacity-75 transition">
+          <img src="../assets/image/linkedinline.png" alt="LinkedIn" class="w-6 h-6">
+        </a>
+        <a href="https://github.com/Francis-Mark-Baguion" class="hover:opacity-75 transition">
+          <img src="../assets/image/githubline.png" alt="GitHub" class="w-6 h-6">
+        </a>
+        <a href="https://www.instagram.com/francismarkbaguion/" class="hover:opacity-75 transition">
+          <img src="../assets/image/instagramline.png" alt="Instagram" class="w-6 h-6">
+        </a>
+      </div>
+
+      <button id="close-menu" class="absolute top-4 right-4 text-gray-700 text-2xl">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="container mx-auto h-full flex items-center justify-between px-8 lg:px-24">
+      <div class="text-content py-16 lg:py-0">
+        <span class="text-sm text-gray-500">HELLO</span>
+        <h1 class="text-4xl font-bold text-gray-800 mt-2">I'm Francis Mark Baguion</h1>
+        <p class="text-gray-600 mt-4 text-justify">
+          I'm a 3rd year Computer Science student at Visayas State University with a strong passion for building tech <br />
+          across platforms—mobile, web, and desktop. I enjoy bringing ideas to life through code and solving real-world problems through development.
+        </p>
+        <a href="../assets/image/CV.pdf" class="bg-red-500 text-white font-bold py-3 px-6 rounded-md mt-8 inline-block hover:bg-red-600">DOWNLOAD CV</a>
+      </div>
+
+      <div class="image-container relative w-1/2 hidden lg:block flex items-center justify-center">
+        <img src="../assets/image/newProfile.png" alt="Profile" class="max-h-screen object-contain" />
+      </div>
+    </div>
+  </div>
+
+  <section class="bg-white text-black py-12">
+    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <!-- Tech Stack -->
+      <div class="border border-gray-300 rounded-lg p-8 shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Tech Stack</h2>
+        <div class="mb-4">
+          <h3 class="font-semibold mb-2">Frontend</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Nuxt.js</span>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="font-semibold mb-2">Backend</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Node.js</span>
+            <span class="tag">Python</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
+
         <div>
-            <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 z-20">
-                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                      <img src="../assets/image/social.png" class="h-8" alt="Logo" />
-                      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Fmbags</span>
-                  </a>
-                  <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
-                      <span class="sr-only">Open main menu</span>
-                      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                      </svg>
-                  </button>
-                  <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-                    <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
-                          <li class="hover:text-gray-500">
-                            <a href="#">HOMEPAGE</a>
-                          </li>
-                          <li class="hover:text-gray-500">
-                            <a href="#about">ABOUT ME</a>
-                          </li>
-                          <li class="hover:text-gray-500">
-                            <a href="#services">SERVICES</a>
-                          </li>
-                          <li class="hover:text-gray-500">
-                            <a href="#works">PROJECTS</a>
-                          </li>
-                          <li class="hover:text-gray-500">
-                            <a href="#contact">CONTACT</a>
-                          </li>
-                          <li class="hover:text-gray-500"></li>
-                            <a href="../pages/resume.html">RESUME</a>
-                          </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-        </div>
-        
-          
-        <div class="h-screen bg-gradient-to-t placeholder-yelgreen from-mint relative overflow-hidden">
- 
-            <!--intro section-->
-
-         <img class="absolute bottom-0 right-0 h-5/6 object-cover left-0 mx-auto z-10" src="../assets/image/Picsart_24-09-20_00-20-39-068.png" alt="profile">
-         <div class="hidden lg:block absolute -bottom-1/4  right-0 left-0 mx-auto w-big h-big bg-mint rounded-full z-0"></div>
-         <div class="hidden md:block absolute top-1/3 text-xl sm:left-8 sm:xl md:left-1/5 md:text-4xl">
-            <span class=" text-gray-600 relative -z-10">Computer Science</span>
-            <p class=" text-red-600 relative -z-10">Student</p>
-         </div>
-         <div class="absolute top-0 md:hidden lg:hidden xl:hidden text-xl sm:left-8 sm:xl md:left-1/5 md:text-4xl">
-            <span class="text-gray-600 relative -z-10">Hi I'm </span> <span class="text-red-600 relative -z-10">Mark</span>
-            <p class="text-gray-600 relative -z-10">A Computer Science Student</p>
-         </div>
-
-         <div class="absolute hidden  lg:flex flex-col top-0 bottom-0 m-auto right-10 bg-white h-fit w-1/3 p-5 gap-5 rounded-md shadow-mint shadow-lg z-20">
-            <h1 class="text-4xl font-bold text-green-900">Hello I'm Mark</h1>
-            <p>a passionate and driven aspiring software
-                 developer with a keen interest in creating
-                 innovative and user-friendly applications.
-                  With a strong foundation in programming 
-                 fundamentals, eager to apply 
-                 skills to apply in the real-world projects and contribute
-                  to the tech industry. </p>
-
-                  <a class="bg-green-800  w-fit text-xl text-white p-2 rounded-md" href="#contact">Hire me</a>
-         </div>
-
-        
-        
-     </div>
-
-
-     <!--about me-->
-     <div id="about" class="px-10 dark:bg-slate-900">
-        <div
-          class="container mx-auto py-40 flex flex-col-reverse lg:flex-row items-center gap-20">
-          <!-- left -->
-          <div class="relative">
-            <img
-              class="h-1/4 absolute top-0 left-0 -z-10"
-              src="../assets/image/grid.png"
-              alt=""
-            />
-            <div class="h-full rounded-full overflow-hidden">
-              <img src="../assets/image/Picsart_24-09-20_00-20-39-068.png" alt="" width="300" height="300"/>
-            </div>
-          </div>
-          <!-- right -->
-          <div class="my-auto flex flex-col gap-3">
-            <h1 class="text-yelgreen font-bold">ABOUT ME</h1>
-            <h1 class="text-3xl font-medium dark:text-white">Better Design</h1>
-            <h1 class="text-3xl font-medium dark:text-white">
-              Better Experience
-            </h1>
-            <p class="text-gray-400">
-                An aspiring full stack developer with beginner experience,
-                 I've built scalable web applications using React and Node.js.
-                  I'm skilled in designing clean, user-friendly interfaces 
-                  and optimizing code for performance. 
-            </p>
-            <h2 class="text-gray-400 font-medium">HTML</h2>
-            <div class="w-full bg-gray-200 h-1.5 rounded-md">
-              <div class="w-full bg-yelgreen h-1.5 rounded-md"></div>
-            </div>
-            <h2 class="text-gray-400 font-medium">Javascript</h2>
-            <div class="w-full bg-gray-200 h-1.5 rounded-md">
-              <div class="w-4/6 bg-yelgreen h-1.5 rounded-md"></div>
-            </div>
-            <h2 class="text-gray-400 font-medium">React</h2>
-            <div class="w-full bg-gray-200 h-1.5 rounded-md">
-              <div class="w-5/6 bg-yelgreen h-1.5 rounded-md"></div>
-            </div>
+          <h3 class="font-semibold mb-2">Others</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Git</span>
+            <span class="tag">Figma</span>
           </div>
         </div>
       </div>
 
-      <!-- services -->
-    <div id="services" class="dark:bg-slate-900">
-        <div class="container mx-auto">
-          <!-- top -->
-          <div class="flex flex-col gap-3 items-center">
-            <h1 class="text-yelgreen font-bold mt-5">SERVICES</h1>
-            <h1 class="text-3xl dark:text-white">What do I offer?</h1>
-            <p class="w-1/2 text-center text-gray-400">
-                I'm focused on building websites that not only look great but are also easy to navigate.
-                 By combining strong branding with user-friendly design, 
-                 I aim to create online experiences that are both visually
-                  appealing and intuitive for your audience.
-            </p>
-          </div>
-          <!-- bottom -->
-          <div class="p-5 sm:p-0 flex flex-wrap justify-between">
-            <!-- card -->
-            <div
-              class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
-            >
-              <img class="w-10" src="../assets/image/programmer (1).png" alt="nuxt" />
-              <h1 class="font-medium text-lg dark:text-white">Nuxt Development</h1>
-              <p class="text-gray-400">
-                I am well versed with Nuxt js and the technology around it.
-              </p>
-              <a class="text-mint font-semibold text-sm" href=""
-                >Read More</a
-              >
-            </div>
-            <!-- card -->
-            <div
-              class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
-            >
-              <img class="w-10" src="../assets/image/c-.png" alt="" />
-              <h1 class="font-medium text-lg dark:text-white">C++ Terminal Program</h1>
-              <p class="text-gray-400">
-                I can utilize C++ in library creation and other terminal based program.
-              </p>
-              <a class="text-mint font-semibold text-sm" href=""
-                >Read More</a
-              >
-            </div>
-            <!-- card -->
-            <div
-              class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
-            >
-              <img class="w-10" src="../assets/image/c-sharp.png" />
-              <h1 class="font-medium text-lg dark:text-white">C# Desktop Development</h1>
-              <p class="text-gray-400">
-                I use C# along with .net framework in desktop development.
-              </p>
-              <a class="text-mint font-semibold text-sm" href=""
-                >Read More</a
-              >
-            </div>
-            <!-- card -->
-            <div
-              class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
-            >
-              <img class="w-10" src="../assets/image/java.png" alt="java" />
-              <h1 class="font-medium text-lg dark:text-white">Java development</h1>
-              <p class="text-gray-400">
-                I have the most experience in java the most with Springboot framework in web development.
-              </p>
-              <a class="text-mint font-semibold text-sm" href=""
-                >Read More</a
-              >
-            </div>
-            <!-- card -->
-            <div
-              class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
-            >
-              <img class="w-10" src="../assets/image/js.png" alt="javascript" />
-              <h1 class="font-medium text-lg dark:text-white">Javascript</h1>
-              <p class="text-gray-400">
-                Javascript for the win
-              </p>
-              <a class="text-mint font-semibold text-sm" href=""
-                >Read More</a
-              >
-            </div>
-            <!-- card -->
-            <div
-              class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
-            >
-              <img class="w-10" src="../assets/image/figma.png" alt="" />
-              <h1 class="font-medium text-lg dark:text-white">Figma Design</h1>
-              <p class="text-gray-400">
-                I offer discounted services in Figma designing.
-              </p>
-              <a class="text-mint font-semibold text-sm" href=""
-                >Read More</a
-              >
-            </div>
-          </div>
+      <!-- Recent Projects -->
+      <div class="border border-gray-300 rounded-lg p-8 shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Recent Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="https://vsu-botanical-plant-system.vercel.app/" target="_blank" class="project-card">
+            <h3 class="font-semibold">VSU Plant Botanical System</h3>
+            <p class="text-sm mb-2">Locate Botanical Plants in VSU</p>
+            <span class="badge">https://vsu-botanical-plant-system.vercel.app/</span>
+          </a>
+
+          <a href="https://github.com/Francis-Mark-Baguion/GrabAViscan" target="_blank" class="project-card">
+            <h3 class="font-semibold">Grab A Viscan</h3>
+            <p class="text-sm mb-2">Campus Runner Application</p>
+            <span class="badge">https://github.com/Francis-Mark-Baguion/GrabAViscan</span>
+          </a>
+
+          <a href="https://github.com/VSUrhuel/voyager" target="_blank" class="project-card">
+            <h3 class="font-semibold">Eduvate</h3>
+            <p class="text-sm mb-2">Mentorship Platform</p>
+            <span class="badge">https://github.com/VSUrhuel/voyager</span>
+          </a>
+
+          <a href="https://weatherings.vercel.app/" target="_blank" class="project-card">
+            <h3 class="font-semibold">Weathering</h3>
+            <p class="text-sm mb-2">Weather Application</p>
+            <span class="badge">https://weatherings.vercel.app/</span>
+          </a>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- works -->
-        <div id="works" class="py-40 dark:bg-slate-900">
-            <div class="container mx-auto">
-            <!-- top -->
-                <div class="flex flex-col gap-3 items-center">
-                    <h1 class="text-yelgreen font-bold">PORTFOLIO</h1>
-                    <h1 class="text-3xl dark:text-white">Works & Projects</h1>
-                    <p class="w-1/2 text-center text-gray-400">
-                        I help people to develop the best application of its kind.
-                    </p>
-                </div>
-                <div class="p-5 sm:p-0 flex flex-wrap justify-between">
-                    <!-- card -->
-                    <div
-                      class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
-                    >
-                      <img class="w-10" src="../assets/image/person.png" alt="nuxt" />
-                      <h1 class="font-medium text-lg dark:text-white">Grab A Viscan</h1>
-                      <p class="text-gray-400">
-                        A Desktop application created with c# .net framework. An application for a two way delivery
-                        application inside VSU campus.
-                      </p>
-                      <a class="text-mint font-semibold text-sm" href=""
-                        >Read More</a
-                      >
-                    </div>
-                    <!-- card -->
-                    <div
-                      class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
-                    >
-                      <img class="w-10" src="../assets/image/education.png" alt="" />
-                      <h1 class="font-medium text-lg dark:text-white">Student Management System 
-                      </h1>
-                      <p class="text-gray-400">
-                        A Student managemenet system for a previous high school  facility, 
-                        implemented using java, and in a desktop setting.
-                      </p>
-                      <a class="text-mint font-semibold text-sm" href=""
-                        >Read More</a
-                      >
-                    </div>
-                    <!-- card -->
-                    <div
-                      class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
-                    >
-                      <img class="w-10" src="../assets/image/natural-product.png" />
-                      <h1 class="font-medium text-lg dark:text-white">VSUBP</h1>
-                      <p class="text-gray-400">
-                        Visayas State University botanical plant system, a web application use to locate and gain information about a certain
-                        botanical plant located inside the campus.
-                      </p>
-                      <a class="text-mint font-semibold text-sm" href=""
-                        >Read More</a
-                      >
-                    </div>
-                    
-                  </div>
-            </div>
-        </div>
+  <!-- Footer -->
+  <footer class="w-full bg-white">
+    <div class="container mx-auto py-5 flex items-center justify-center">
+      <span class="font-medium text-black text-center">
+        © 2024 Francis Mark Baguion. All rights reserved.
+      </span>
+    </div>
+  </footer>
 
-        <!-- contact -->
-    <div id="contact" class="dark:bg-slate-900">
-        <div class="container mx-auto">
-          <!-- top -->
-          <div class="flex flex-col gap-3 items-center">
-            <h1 class="text-yelgreen font-bold">Contact Me</h1>
-            <h1 class="text-3xl dark:text-white ">Have a Question?</h1>
-            <p class="w-1/2 text-center text-gray-400">
-              Do you have an idea? Let's discuss it and see what we can do
-              together.
-            </p>
-          </div>
-          <!-- bottom -->
-          <form class="mt-5 p-8 flex flex-col gap-5 items-center">
-            <input
-              class="p-2 w-full md:w-1/2 ring-1 ring-yelgreen rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-black"
-              type="text"
-              placeholder="Name Surname"
-            />
-            <input
-              class="p-2 w-full md:w-1/2 ring-1 ring-yelgreen rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-black"
-              type="email"
-              placeholder="Email"
-            />
-            <textarea
-              class="p-2 w-full md:w-1/2 ring-1 ring-yelgreen rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-black"
-              cols="30"
-              rows="10"
-              placeholder="Message..."
-            ></textarea>
-            <button
-              class="w-1/2 bg-yelgreen text-white font-medium px-3 py-2 rounded-md cursor-pointer"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-      </div>
-      
-      <!-- footer -->
-    <div class="w-full bg-gray-800">
-        <div class="container mx-auto py-5 flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <img class="w-8" src="../assets/image/social.png" alt="" />
-            <span class="text-2xl font-bold text-white">Fmbags</span>
-          </div>
-          <span class="hidden md:block font-medium text-white"
-            >© 2024 Copied design by Francis Mark Baguion.</span
-          >
-          <div class="flex gap-2">
-            <a href="https://www.facebook.com/francismark.baguion" target="_blank">
-              <img class="w-4 cursor-pointer" src="../assets/image/facebook.png" alt="facebook">
-            </a>    
-            <a href="https://www.instagram.com/francismarkbaguion/" target="_blank"></a>
-              <img class="w-4 cursor-pointer" src="../assets/image/instagram.png" alt="insta" />
-            </a>
-            <a href="https://x.com/fmbags" target="_blank"></a>
-            <img class="w-4 cursor-pointer" src="../assets/image/twitter.png" alt="twitter" />
-            </a>
-            <a href="https://www.linkedin.com/in/francis-mark-baguion-b21457216/" target="_blank"></a>
-            <img class="w-4 cursor-pointer" src="../assets/image/linkedin.png" alt="linked in" />
-            </a>
-            
-          </div>
-        </div>
-     </div>
-     
-     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <!-- JavaScript for mobile menu toggle -->
+  <script>
+    const mobileMenuBtn = document.getElementById("mobile-menu-button");
+    const closeMenuBtn = document.getElementById("close-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    mobileMenuBtn.addEventListener("click", () => {
+      mobileMenu.classList.remove("hidden");
+    });
+
+    closeMenuBtn.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  </script>
+
+  <!-- Optional styles -->
+  <style>
+    .tag {
+      padding: 0.25rem 1rem;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+    }
+    .project-card {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-color: #3b82f6;
+    }
+    .badge {
+      background-color: black;
+      color: white;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+    }
+  </style>
 </body>
 </html>
-
-
-
-
